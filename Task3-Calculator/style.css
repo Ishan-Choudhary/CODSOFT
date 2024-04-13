@@ -1,0 +1,167 @@
+*   {
+    --pri1: #395C6B;
+    --pri2: #80A4ED;
+    --sec1: #D4CB92;
+    --sec2: #E6E1C5;
+    --highlight: #BCD3F2;
+}
+
+
+body    {
+    background-color: var(--highlight);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    background-color: var(--pri1);
+    display: grid;
+    grid-template-areas: "result result result result result"
+                         "num7 num8 num9 opDel opClear"
+                         "num4 num5 num6 opAdd opMultiply"
+                         "num1 num2 num3 opSubtract opDivide"
+                         "num0 opDecimal opBracketOpen opBracketClose opEqual";
+    gap: 10px;
+    width: 30vw;
+    height: 30vw;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+button, textarea  {
+    border-radius: 6px;
+}
+
+button  {
+    font-size: 15pt;
+    background-color: var(--sec1);
+}
+
+textarea    {
+    font-size: 20pt;
+    resize: none;
+}
+
+button:hover    {
+    opacity: 50%;
+}
+
+button:active   {
+    opacity: 100%;
+}
+
+
+.result {
+    grid-area: result;
+    text-align: right;
+    padding-right: 13px;
+}
+
+.num7   {
+    grid-area: num7;
+}
+
+.num8   {
+    grid-area: num8;
+}
+
+.num9   {
+    grid-area: num9;
+}
+
+.num4   {
+    grid-area: num4;
+}
+
+.num5   {
+    grid-area: num5;
+}
+
+.num6   {
+    grid-area: num6;
+}
+
+.num1   {
+    grid-area: num1;
+}
+
+.num2   {
+    grid-area: num2;
+}
+
+.num3   {
+    grid-area: num3;
+}
+
+.num0   {
+    grid-area: num0;
+}
+
+.opAdd  {
+    grid-area: opAdd;
+    background-color: var(--sec2);
+}
+
+.opMultiply {
+    grid-area: opMultiply;
+    background-color: var(--sec2);
+}
+
+.opSubtract {
+    grid-area: opSubtract;
+    background-color: var(--sec2);
+}
+
+.opDivide   {
+    grid-area: opDivide;
+    background-color: var(--sec2);
+}
+
+.opEqual    {
+    grid-area: opEqual;
+    background-color: var(--sec2);
+}
+
+.opClear    {
+    grid-area: opClear;
+    background-color: var(--sec2);
+}
+
+.opDel  {
+    grid-area: opDel;
+    background-color: var(--sec2);
+}
+
+.opBracketOpen  {
+    grid-area: opBracketOpen;
+    background-color: var(--sec2);
+}
+
+.opBracketClose  {
+    grid-area: opBracketClose;
+    background-color: var(--sec2);
+}
+
+.opDecimal  {
+    grid-area: opDecimal;
+    background-color: var(--sec2);
+}
+
+
+@media only screen and (max-width: 420px)   {
+    .calculator {
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    button:hover    {
+        opacity: 100%;
+    }
+
+    button:active   {
+        opacity: 50%;
+    }
+}
