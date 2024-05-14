@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <script type="text/javascript" src="./nav.js" defer></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav>
+        <button class="mobile-nav-toggle" data-visible="false" style="position: fixed;"></button>
+        <ul data-visible="false" class="sidebar">
+            <li><small class="nav-item"><a href="#hero" onclick="document.querySelector('.sidebar').setAttribute('data-visible', false); document.querySelector('.mobile-nav-toggle').setAttribute('data-visible', false)">Home</a></small></li>
+            <li><small class="nav-item"><a href="#projects" onclick="document.querySelector('.sidebar').setAttribute('data-visible', false); document.querySelector('.mobile-nav-toggle').setAttribute('data-visible', false)">Projects</a></small></li>
+            <li><small class="nav-item"><a href="#about" onclick="document.querySelector('.sidebar').setAttribute('data-visible', false); document.querySelector('.mobile-nav-toggle').setAttribute('data-visible', false)">About Me</a></small></li>
+            <li><small class="nav-item"><a href="#contact" onclick="document.querySelector('.sidebar').setAttribute('data-visible', false); document.querySelector('.mobile-nav-toggle').setAttribute('data-visible', false)">Contact Me</a></small></li>
+        </ul>
+    </nav>
+    <section class="hero" id="hero">
+        <div>
+            <h1>Hi I'm Ishan</h1>
+            <h5>A student and enthusiastic web developer, specializing in React.</h2>
+        </div>
+        <lottie-player src="https://lottie.host/947b8537-b788-480a-98a0-249fd75fdd07/Vjh8gwEyLp.json" background="##FFFFFF" speed="1" style="width: fit-content; height: fit-content; z-index: -1" loop autoplay direction="1" mode="normal"></lottie-player>
+    </section>
+    <section class="about" id="about">
+        <div class="image"></div>
+        <div class="about-content">
+            <h3 style="vertical-align: text-top;">About Me</h3>
+            <div class="tabs">
+                <input type="radio" class="tabs__radio" name="tabs-about" id="skills" checked/>
+                <label for="skills" class="tabs__label">Skills</label>
+                <div class="tabs__content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia voluptatem ullam a corrupti dolores temporibus dolor veniam, officiis quisquam exercitationem quibusdam odit iste nulla.</p>
+                </div>
+                <input type="radio" class="tabs__radio" name="tabs-about" id="experience"/>
+                <label for="experience" class="tabs__label">Experience</label>
+                <div class="tabs__content">
+                    <p>School: Ram Ratna International School</p>
+                    <p>HSE: JBCN International Borivali</p>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <h3 style="margin-bottom: 20px;">Projects</h3>
+        <div class="proj-container">
+            <div class="proj proj1">
+                <div class="img-container img-q2v"></div>
+                <p>Reddit Question To Video</p>
+                <a href="https://github.com/Ishan-Choudhary/Reddit_question_to_video/blob/main/backgroundImg.py" target="_blank">Click here to learn more</a>
+            </div>
+            <div class="proj proj1">
+                <div class="img-container img-LittleLemon"></div>
+                <p>Little Lemon Landing Page</p>
+                <a href="https://github.com/Ishan-Choudhary/Little-lemon-react-capstone" target="_blank">Click here to learn more</a>
+            </div>
+            <div class="proj proj1">
+                <div class="img-container img-HD"></div>
+                <p>Hair Day landing page</p>
+                <a href="https://github.com/Ishan-Choudhary/Hair-Day" target="_blank">Click here to learn more</a>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <small>Copyright ©</small>
+        <small>Contact: +91 9423402344 Email: fakemail@gmail.com</small>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(window).scroll(function() {
+            if($(window).scrollTop())   {
+                $("ul").addClass("bg");
+            }
+            else    {
+                $("ul").removeClass("bg");
+            }
+        })
+    </script>
+</body>
+</html>

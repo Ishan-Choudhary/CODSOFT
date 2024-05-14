@@ -149,12 +149,7 @@ button:active   {
 }
 
 
-@media only screen and (max-width: 420px)   {
-    .calculator {
-        width: fit-content;
-        height: fit-content;
-    }
-}
+
 
 @media only screen and (max-width: 780px) {
     button:hover    {
@@ -163,5 +158,10 @@ button:active   {
 
     button:active   {
         opacity: 50%;
+    }
+
+    .calculator {
+        width: fit-content;
+        height: fit-content;
     }
 }
